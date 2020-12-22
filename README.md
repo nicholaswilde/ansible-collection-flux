@@ -1,8 +1,11 @@
 # Flux Collection
 <!-- Add CI and code coverage badges here. Samples included below. -->
-[![CI](https://github.com/ansible-collections/REPONAMEHERE/workflows/CI/badge.svg?event=push)](https://github.com/ansible-collections/REPONAMEHERE/actions) [![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/REPONAMEHERE)](https://codecov.io/gh/ansible-collections/REPONAMEHERE)
+[![CI](https://github.com/nicholaswilde/ansible-collection-flux/workflows/CI/badge.svg?event=push)](https://github.com/nicholaswilde/ansible-collection-flux/actions)
+[![Codecov](https://img.shields.io/codecov/c/github/nicholaswilde/ansible-collection-flux)](https://codecov.io/gh/nicholaswilde/ansible-collection-flux)
 
 <!-- Describe the collection and why a user would want to use it. What does the collection do? -->
+
+## This collection is currently in the development process!
 
 ## Tested with Ansible
 
@@ -32,7 +35,7 @@ See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_gui
 
 ## Release notes
 
-See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/main/CHANGELOG.rst).
+See the [changelog](https://github.com/nicholaswilde/ansible-collection-flux/tree/main/CHANGELOG.rst).
 
 ## Roadmap
 
