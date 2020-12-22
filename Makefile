@@ -1,9 +1,13 @@
 
-.PHONY: build publish
+.PHONY: build publish clean
 
 ## build		: Build the tarball
 build:
 	ansible-galaxy collection build --force
+
+## clean		: Clean up the build
+clean:
+	rm *.tar.gz
 
 ## publish	: Publish the tarball
 publish:
