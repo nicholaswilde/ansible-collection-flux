@@ -1,0 +1,8 @@
+---
+# See available releases: https://github.com/fluxcd/flux2/releases
+# Leave off the 'v' in flux_version
+flux_version: 'v0.5.6'
+flux_platform: linux
+flux_arch: arm
+
+flux_bin_path: /usr/local/bin/flux

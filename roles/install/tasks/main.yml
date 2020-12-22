@@ -1,0 +1,32 @@
+---
+- name: Check if Flux binary exists.
+  stat:
+    path: "{{ flux_bin_path }}"
+  register: flux_check
+
+- name: Check Flux version.
+  command: "{{ flux_bin_path }} --version"
+  failed_when: false
+  changed_when: false
+  register: flux_existing_version
+
+- name: Download flux.
+  unarchive:
+    src: https://github.com/fluxcd/flux2/releases/download/{{ flux_version }}/flux_{{ ( flux_version ) | replace('v','') }}_{{ flux_platform }}_{{ flux_arch }}.tar.gz
+    dest: /tmp
+    remote_src: true
+    mode: 0755
+  register: flux_download
+  when: >
+    not flux_check.stat.exists
+    or flux_version not in flux_existing_version.stdout
+
+- name: Copy flux binary into place.
+  copy:
+    src: "/tmp/flux"
+    dest: "{{ flux_bin_path }}"
+    mode: 0755
+    remote_src: true
+  become: true
+  register: flux_copy
+  when: flux_download is changed
