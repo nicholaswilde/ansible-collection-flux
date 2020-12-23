@@ -22,7 +22,22 @@
 
 <!-- Galaxy will eventually list the module docs within the UI, but until that is ready, you may need to either describe your plugins etc here, or point to an external docsite to cover that information. -->
 
-## Using this collection
+## Installation and Usage
+
+### Installing the Collection from Ansible Galaxy
+
+Before using the Kubernetes collection, you need to install it with the Ansible Galaxy CLI:
+
+    ansible-galaxy collection install nicholaswilde.flux
+
+You can also include it in a `requirements.yml` file and install it via `ansible-galaxy collection install -r requirements.yml`, using the format:
+
+```yaml
+---
+collections:
+  - name: nicholaswilde.flux
+    version: 0.1.0
+```
 
 <!--Include some quick examples that cover the most common use cases for your collection content. -->
 
